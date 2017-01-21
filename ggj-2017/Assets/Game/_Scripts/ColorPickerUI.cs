@@ -16,35 +16,28 @@ public class ColorPickerUI : MonoBehaviour
 
   private Dictionary<MoodColor, ColorOption> m_colorOptionsMap = new Dictionary<MoodColor, ColorOption>();
 
+  public void ChooseColor(MoodColor moodColor)
+  {
+    StartCoroutine(ColorSelectAnimation(m_colorOptionsMap[moodColor]));
+  }
+
   private void Start()
   {
-    GameGlobals.Instance.PlayerController.ColorPressed += OnColorPressed;
-
     foreach (ColorOption option in m_colorOptions)
     {
       m_colorOptionsMap.Add(option.MoodColor, option);
     }
   }
 
-  private void OnDestroy()
-  {
-    GameGlobals.Instance.PlayerController.ColorPressed -= OnColorPressed;
-  }
-
-  private void OnColorPressed(MoodColor moodColor)
-  {
-    StartCoroutine(ColorSelectAnimation(m_colorOptionsMap[moodColor]));
-  }
-
   private IEnumerator ColorSelectAnimation(ColorOption option)
   {
     const float duration = 1.0f;
-    float animEndTime = Time.time + duration;
+    float startTime = Time.time;
     Vector3 startScale = option.Transform.localScale;
     Vector3 endScale = startScale * 1.25f;
-    while (Time.time < animEndTime)
+    while (Time.time < startTime + duration)
     {
-      float t = (animEndTime - Time.time) / duration;
+      float t = (Time.time - startTime) / duration;
       option.Transform.localScale = Vector3.Lerp(startScale, endScale, t);
       yield return null;
     }

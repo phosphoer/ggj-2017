@@ -4,8 +4,6 @@ public class PlayerController : MonoBehaviour
 {
   public Rewired.Player PlayerInput { get { return m_rewiredPlayer; } }
 
-  public event System.Action<MoodColor> ColorPressed;
-
   [SerializeField]
   private ColorPickerUI m_colorPickerUIPrefab;
 
@@ -33,29 +31,35 @@ public class PlayerController : MonoBehaviour
     }
 
     // Interaction input happens if we are in an interaction zone 
-    if (m_rewiredPlayer.GetButtonDown("Interact") && m_currentMoodZone != null)
+    if (m_rewiredPlayer.GetButtonDown("Interact") && m_currentMoodZone != null && m_colorPicker == null)
     {
       m_currentMoodZone.HideInteractionPrompt();
       m_colorPicker = Instantiate(m_colorPickerUIPrefab);
     }
     
     // Color input
-    if (m_rewiredPlayer.GetButtonDown("ColorRed"))
+    if (m_colorPicker != null && m_currentMoodZone != null)
     {
-      if (ColorPressed != null)
-        ColorPressed(MoodColor.Red);
-    }
+      if (m_rewiredPlayer.GetButtonDown("ColorRed"))
+      {
+        m_colorPicker.ChooseColor(MoodColor.Red);
+        m_currentMoodZone.ChooseMoodColor(MoodColor.Red);
+        m_currentMoodZone = null;      
+      }
 
-    if (m_rewiredPlayer.GetButtonDown("ColorBlue"))
-    {
-      if (ColorPressed != null)
-        ColorPressed(MoodColor.Blue);
-    }
+      if (m_rewiredPlayer.GetButtonDown("ColorBlue"))
+      {
+        m_colorPicker.ChooseColor(MoodColor.Blue);
+        m_currentMoodZone.ChooseMoodColor(MoodColor.Blue);
+        m_currentMoodZone = null;      
+      }
 
-    if (m_rewiredPlayer.GetButtonDown("ColorYellow"))
-    {
-      if (ColorPressed != null)
-        ColorPressed(MoodColor.Yellow);
+      if (m_rewiredPlayer.GetButtonDown("ColorYellow"))
+      {
+        m_colorPicker.ChooseColor(MoodColor.Yellow);
+        m_currentMoodZone.ChooseMoodColor(MoodColor.Yellow);
+        m_currentMoodZone = null;      
+      }
     }
 
     // Get input for movement direction
