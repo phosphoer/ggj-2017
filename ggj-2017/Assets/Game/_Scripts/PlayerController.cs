@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     if (m_rewiredPlayer.GetButtonDown("Interact") && m_currentMoodZone != null && m_colorPicker == null)
     {
       m_currentMoodZone.HideInteractionPrompt();
+      m_currentMoodZone.BeginInteraction();
       m_colorPicker = Instantiate(m_colorPickerUIPrefab);
       if (m_animator != null) m_animator.SetTrigger("InteractGreen");
     }

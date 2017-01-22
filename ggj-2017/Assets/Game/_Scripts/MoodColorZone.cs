@@ -85,6 +85,12 @@ public class MoodColorZone : MonoBehaviour
       m_connectedWaypointAI.CanWalk = true;
   }
 
+  public void BeginInteraction()
+  {
+    if (m_connectedWaypointAI != null)
+      m_connectedWaypointAI.CanWalk = false;
+  }
+
   public void ChooseMoodColor(MoodColor moodColorToMix)
   {
     MoodColor mixedColor = CombineColors(MoodColor, moodColorToMix);
@@ -94,6 +100,9 @@ public class MoodColorZone : MonoBehaviour
     {
       MoodZoneActivated(this, mixedColor);
     }
+
+    if (m_connectedWaypointAI != null)
+      m_connectedWaypointAI.CanWalk = true;
   }
 
   private void Start()
@@ -103,7 +112,10 @@ public class MoodColorZone : MonoBehaviour
     {
       m_sharedMaterial = m_moodZoneRenderers[0].material;
       foreach (Renderer r in m_moodZoneRenderers)
-        r.sharedMaterial = m_sharedMaterial;
+      {
+        if (r != null)
+          r.sharedMaterial = m_sharedMaterial;
+      }
     }
 
     // Initialize to our starting color
