@@ -257,7 +257,7 @@ ModelImporter:
       name: Idle
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 199
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -497,8 +497,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Apples
       takeName: Take 001
-      firstFrame: 200
-      lastFrame: 248
+      firstFrame: 202
+      lastFrame: 247
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
