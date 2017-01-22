@@ -25,6 +25,7 @@ public class DateMood : MonoBehaviour
 
   public static event System.Action<DateMood> MoodCentered;
   public static event System.Action<DateMood> MoodOutOfControl;
+  public static event System.Action<DateMood> GoodMood;
 
   private MoodColor m_moodColor;
   private int m_moodIntensity;
@@ -154,6 +155,11 @@ public class DateMood : MonoBehaviour
     {
       if (MoodOutOfControl != null)
         MoodOutOfControl(this);
+    }
+    else if (MoodIntensity <= 1)
+    {
+      if (GoodMood != null)
+        GoodMood(this);
     }
 
     Debug.Log("Final Mood");
