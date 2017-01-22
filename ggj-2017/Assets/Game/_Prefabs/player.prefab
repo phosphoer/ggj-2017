@@ -3082,6 +3082,7 @@ MonoBehaviour:
     type: 2}
   m_rewiredPlayerID: 0
   m_character: {fileID: 114336098267515174}
+  m_animator: {fileID: 95583211646996686}
 --- !u!137 &137011605780260052
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

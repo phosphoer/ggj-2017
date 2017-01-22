@@ -2992,6 +2992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowObject: {fileID: 0}
   m_character: {fileID: 114736644110287462}
+  m_animator: {fileID: 95312819082719004}
 --- !u!114 &114302510931322244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3004,6 +3005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moodUI: {fileID: 114046784287257012}
+  m_animator: {fileID: 95312819082719004}
 --- !u!114 &114390949879307912
 MonoBehaviour:
   m_ObjectHideFlags: 1

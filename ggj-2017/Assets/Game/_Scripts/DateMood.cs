@@ -27,6 +27,8 @@ public class DateMood : MonoBehaviour
 
   [SerializeField]
   private DateMoodUI m_moodUI;
+  [SerializeField]
+  private Animator m_animator;
 
   public void ApplyMoodEffect(MoodColor appliedColor, int moodBaseIntensity)
   {
@@ -45,6 +47,8 @@ public class DateMood : MonoBehaviour
     Vector2 currentMoodVector = new Vector2(Mathf.Cos(currentColorAngle), Mathf.Sin(currentColorAngle)).normalized;
     Vector2 appliedMoodVector = new Vector2(Mathf.Cos(appliedColorAngle), Mathf.Sin(appliedColorAngle)).normalized;
     Vector2 combinedVector = currentMoodVector + appliedMoodVector;
+
+    int originalIntensity = MoodIntensity;
 
     // If the two vectors combine to form the zero vector then they are opposites
     if (combinedVector.magnitude <= 0.01f)
@@ -121,6 +125,15 @@ public class DateMood : MonoBehaviour
 
       MoodColor = (MoodColor)moodIndex;
       MoodIntensity = currentIntensity;
+    }
+
+    if (MoodIntensity > originalIntensity)
+    {
+      if (m_animator != null) m_animator.SetTrigger("EmoteNegative");
+    }
+    else
+    {
+      if (m_animator != null) m_animator.SetTrigger("EmotePositive");
     }
 
     Debug.Log("Final Mood");

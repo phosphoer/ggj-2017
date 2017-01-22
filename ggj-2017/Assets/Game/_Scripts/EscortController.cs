@@ -9,6 +9,9 @@ public class EscortController : MonoBehaviour
   [SerializeField]
   private DudeController m_character;
 
+  [SerializeField]
+  private Animator m_animator;
+
   private NavMeshPath m_path;
   private int m_currentPathIndex;
   private bool m_alive = true;
