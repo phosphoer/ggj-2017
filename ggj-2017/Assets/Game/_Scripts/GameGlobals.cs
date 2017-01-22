@@ -8,6 +8,8 @@ public class GameGlobals : Singleton<GameGlobals>
   public GameObject InteractPromptPrefab;
   public PlayerController PlayerController { get; set; }
 
+  public Renderer[] DateRenderers;
+
   private void Awake()
   {
     Instance = this;

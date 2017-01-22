@@ -90,7 +90,7 @@ public class CameraController : MonoBehaviour
 
   private IEnumerator AnimateFromTitle()
   {
-    const float duration = 3.0f;
+    const float duration = 2.0f;
     float startTime = Time.time;
     Quaternion rotBegin = m_cameraTransform.localRotation;
     while (Time.time < startTime + duration)
