@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,6 +10,7 @@ public class ColorPickerUI : MonoBehaviour
   {
     public MoodColor MoodColor;
     public Transform Transform;
+    public Image Image;
   }
 
   [SerializeField]
@@ -26,6 +28,7 @@ public class ColorPickerUI : MonoBehaviour
     foreach (ColorOption option in m_colorOptions)
     {
       m_colorOptionsMap.Add(option.MoodColor, option);
+      option.Image.color = GameGlobals.Instance.MoodColors[(int)option.MoodColor];
     }
   }
 

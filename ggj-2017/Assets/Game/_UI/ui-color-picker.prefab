@@ -170,10 +170,13 @@ MonoBehaviour:
   m_colorOptions:
   - MoodColor: 0
     Transform: {fileID: 224025385087993754}
+    Image: {fileID: 114437040311147822}
   - MoodColor: 2
     Transform: {fileID: 224728243005836794}
-  - MoodColor: 1
+    Image: {fileID: 114838511767986554}
+  - MoodColor: 4
     Transform: {fileID: 224903508085270270}
+    Image: {fileID: 114496313189201056}
 --- !u!114 &114666024267319692
 MonoBehaviour:
   m_ObjectHideFlags: 1

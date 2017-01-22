@@ -1,9 +1,9 @@
 public enum MoodColor
 {
   Red,
-  Yellow,
+  Violet,
   Blue,
-  Orange,
   Green,
-  Violet
+  Yellow,
+  Orange
 }

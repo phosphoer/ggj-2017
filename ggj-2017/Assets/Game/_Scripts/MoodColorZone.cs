@@ -4,6 +4,9 @@ using System.Collections;
 public class MoodColorZone : MonoBehaviour
 {
   public MoodColor MoodColor;
+  public int MoodIntensity = 1;
+
+  public static event System.Action<MoodColorZone, MoodColor> MoodZoneActivated;
   
   [SerializeField]
   private Transform m_focusTransform;
@@ -44,6 +47,20 @@ public class MoodColorZone : MonoBehaviour
     return a;
   }
 
+  public static MoodColor GetOppositeColor(MoodColor color)
+  {
+    int colorCount = System.Enum.GetNames(typeof(MoodColor)).Length;
+    int newColorIndex = ((int)color + 3) % (colorCount - 1);
+    return (MoodColor)newColorIndex;
+  }
+
+  public static MoodColor RotateColor(MoodColor color, int amount)
+  {
+    int colorCount = System.Enum.GetNames(typeof(MoodColor)).Length;
+    int newColorIndex = ((int)color + amount) % (colorCount - 1);
+    return (MoodColor)newColorIndex;
+  }
+
   public void ShowInteractionPrompt()
   {
     m_interactionPrompt = Instantiate(GameGlobals.Instance.InteractPromptPrefab);
@@ -63,6 +80,11 @@ public class MoodColorZone : MonoBehaviour
   {
     MoodColor mixedColor = CombineColors(MoodColor, moodColorToMix);
     StartCoroutine(AnimateColorTo(mixedColor));
+
+    if (MoodZoneActivated != null)
+    {
+      MoodZoneActivated(this, mixedColor);
+    }
   }
 
   private void Start()
