@@ -66,6 +66,11 @@ public class MoodColorZone : MonoBehaviour
 
   public void ShowInteractionPrompt()
   {
+    if (m_interactionPrompt != null)
+    {
+      Destroy(m_interactionPrompt);
+    }
+    
     m_interactionPrompt = Instantiate(GameGlobals.Instance.InteractPromptPrefab);
     m_interactionPrompt.transform.position = m_focusTransform.position;
 

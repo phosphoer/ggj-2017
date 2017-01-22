@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
       m_currentMoodZone.HideInteractionPrompt();
       m_currentMoodZone.BeginInteraction();
       m_colorPicker = Instantiate(m_colorPickerUIPrefab);
+      m_colorPicker.SetBaseColor(m_currentMoodZone.MoodColor);
       if (m_animator != null) m_animator.SetTrigger("InteractGreen");
     }
     

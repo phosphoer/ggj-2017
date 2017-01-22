@@ -16,11 +16,23 @@ public class ColorPickerUI : MonoBehaviour
   [SerializeField]
   private ColorOption[] m_colorOptions;
 
+  [SerializeField]
+  private Image[] m_colorWheels;
+
+  [SerializeField]
+  private Transform m_root;
+
   private Dictionary<MoodColor, ColorOption> m_colorOptionsMap = new Dictionary<MoodColor, ColorOption>();
+  private MoodColor m_baseColor;
 
   public void ChooseColor(MoodColor moodColor)
   {
     StartCoroutine(ColorSelectAnimation(m_colorOptionsMap[moodColor]));
+  }
+
+  public void SetBaseColor(MoodColor baseColor)
+  {
+    m_baseColor = baseColor;
   }
 
   private void Start()
@@ -28,23 +40,29 @@ public class ColorPickerUI : MonoBehaviour
     foreach (ColorOption option in m_colorOptions)
     {
       m_colorOptionsMap.Add(option.MoodColor, option);
-      option.Image.color = GameGlobals.Instance.MoodColors[(int)option.MoodColor];
     }
+
+    foreach (Image color in m_colorWheels)
+    {
+      if (color != null)
+        color.gameObject.SetActive(false);
+    }
+
+    m_colorWheels[(int)m_baseColor].gameObject.SetActive(true);
   }
 
   private IEnumerator ColorSelectAnimation(ColorOption option)
   {
-    const float duration = 1.0f;
+    option.Transform.gameObject.SetActive(true);
+    const float duration = 0.25f;
     float startTime = Time.time;
-    Vector3 startScale = option.Transform.localScale;
-    Vector3 endScale = startScale * 1.25f;
+    Vector3 startScale = m_root.localScale;
     while (Time.time < startTime + duration)
     {
       float t = (Time.time - startTime) / duration;
-      option.Transform.localScale = Vector3.Lerp(startScale, endScale, t);
-      yield return null;
+     m_root.localScale = Vector3.Lerp(startScale, Vector3.zero, t);
+      yield return null; 
     }
-
     Destroy(gameObject);
   }
 }
