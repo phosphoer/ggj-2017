@@ -22,6 +22,9 @@ public class DateMood : MonoBehaviour
     }
   }
 
+  public static event System.Action<DateMood> MoodCentered;
+  public static event System.Action<DateMood> MoodOutOfControl;
+
   private MoodColor m_moodColor;
   private int m_moodIntensity;
 
@@ -135,6 +138,18 @@ public class DateMood : MonoBehaviour
     else
     {
       if (m_animator != null) m_animator.SetTrigger("EmotePositive");
+    }
+
+    // Send mood events if necessary 
+    if (MoodIntensity == 0)
+    {
+      if (MoodCentered != null)
+        MoodCentered(this);
+    }
+    else if (MoodIntensity == GameGlobals.Instance.MaxIntensity)
+    {
+      if (MoodOutOfControl != null)
+        MoodOutOfControl(this);
     }
 
     Debug.Log("Final Mood");

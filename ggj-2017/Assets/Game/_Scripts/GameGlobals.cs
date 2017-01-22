@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameGlobals : Singleton<GameGlobals>
 {
@@ -10,5 +11,10 @@ public class GameGlobals : Singleton<GameGlobals>
   private void Awake()
   {
     Instance = this;
+  }
+
+  private void Start()
+  {
+    SceneManager.SetActiveScene(gameObject.scene);
   }
 }

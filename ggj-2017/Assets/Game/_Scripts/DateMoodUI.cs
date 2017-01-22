@@ -54,6 +54,6 @@ public class DateMoodUI : MonoBehaviour
 
     m_moodColorImage.color = saturatedColor;
     m_moodColorImage.sprite = m_colorIcons[(int)MoodColor];
-    m_moodColorImage.transform.localScale = Vector3.one * (Mathf.Max(intensityRamp, 0.2f, 1.0f));
+    m_moodColorImage.transform.localScale = Vector3.one * (Mathf.Max(intensityRamp, 0.5f));
   }
 }
