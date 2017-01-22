@@ -30,6 +30,7 @@ public class DateMood : MonoBehaviour
   private MoodColor m_moodColor;
   private int m_moodIntensity;
   private int m_currentTimeIcon;
+  private float m_moodDriftTimer;
 
   [SerializeField]
   private AudioClip m_happySound;
@@ -41,6 +42,8 @@ public class DateMood : MonoBehaviour
   private GameObject[] m_timeIcons;
   [SerializeField]
   private Animator m_animator;
+  [SerializeField]
+  private Renderer[] m_dateRenderers;
 
   public void ApplyMoodEffect(MoodColor appliedColor, int moodBaseIntensity)
   {
@@ -153,6 +156,8 @@ public class DateMood : MonoBehaviour
       GetComponent<AudioSource>().PlayOneShot(m_happySound);
     }
 
+    StartCoroutine(AnimateColor());
+
     // Send mood events if necessary 
     if (MoodIntensity == 0)
     {
@@ -181,16 +186,28 @@ public class DateMood : MonoBehaviour
     MoodColorZone.MoodZoneActivated += OnMoodZoneActivated;
     MoodColor = MoodColor.Blue;
     MoodIntensity = 2;
+    m_moodDriftTimer = -30.0f;
 
     GameEndCondition.MinuteElapsed += OnMinuteElapsed;
 
     StartCoroutine(MoodDriftRoutine());
+    StartCoroutine(AnimateColor());
   }
 
   private void OnDestroy()
   {
     MoodColorZone.MoodZoneActivated -= OnMoodZoneActivated;
     GameEndCondition.MinuteElapsed -= OnMinuteElapsed;
+  }
+
+  private void Update()
+  {
+    m_moodDriftTimer += Time.deltaTime;
+    if (m_moodDriftTimer > 20.0f)
+    {
+      ApplyMoodEffect(MoodColor, 1);      
+      m_moodDriftTimer = 0;
+    }
   }
 
   private void RandomizeMood()
@@ -210,6 +227,7 @@ public class DateMood : MonoBehaviour
   private void OnMoodZoneActivated(MoodColorZone moodZone, MoodColor desiredColor)
   {
     StartCoroutine(WaitToDoMoodEffect(moodZone, desiredColor));
+    m_moodDriftTimer = 0;
   }
 
   private IEnumerator ShowTimeIcon(GameObject timeIcon)
@@ -219,12 +237,38 @@ public class DateMood : MonoBehaviour
     timeIcon.SetActive(false);
   }
 
+  private IEnumerator AnimateColor()
+  {
+    const float duration = 2.0f;
+    float startTime = Time.time;
+    Color toColor = GameGlobals.Instance.MoodColors[(int)MoodColor];
+    while (Time.time < startTime + duration)
+    {
+      float t = (Time.time - startTime) / duration;
+      foreach (Renderer r in m_dateRenderers)
+        r.sharedMaterial.SetColor("_Color", Color.Lerp(Color.white, toColor, t));
+
+      yield return null; 
+    }
+
+    yield return new WaitForSeconds(2.0f);
+
+    startTime = Time.time;
+    while (Time.time < startTime + duration)
+    {
+      float t = (Time.time - startTime) / duration;
+      foreach (Renderer r in m_dateRenderers)
+        r.sharedMaterial.SetColor("_Color", Color.Lerp(toColor, Color.white, t));
+
+      yield return null; 
+    }
+  }
+
   private IEnumerator MoodDriftRoutine()
   {
     while (true)
     {
       yield return new WaitForSeconds(35.0f);
-      ApplyMoodEffect(MoodColor, 1);
     }
   }
 

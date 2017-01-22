@@ -143,12 +143,6 @@ public class MoodColorZone : MonoBehaviour
       float t = (Time.time - startTime) / duration;
       m_sharedMaterial.SetColor("_Color", Color.Lerp(currentColor, toColor, t));
 
-      foreach (Renderer r in GameGlobals.Instance.DateRenderers)
-      {
-        if (r != null)
-          r.sharedMaterial.SetColor("_Color", Color.Lerp(Color.white, toColor, t));
-      }
-
       yield return null; 
     }
 
@@ -159,12 +153,6 @@ public class MoodColorZone : MonoBehaviour
     {
       float t = (Time.time - startTime) / duration;
       m_sharedMaterial.SetColor("_Color", Color.Lerp(toColor, currentColor, t));
-
-      foreach (Renderer r in GameGlobals.Instance.DateRenderers)
-      {
-        if (r != null)
-          r.sharedMaterial.SetColor("_Color", Color.Lerp(toColor, Color.white, t));
-      }
 
       yield return null; 
     }

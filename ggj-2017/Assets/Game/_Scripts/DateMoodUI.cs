@@ -42,7 +42,6 @@ public class DateMoodUI : MonoBehaviour
 
   private void Start()
   {
-    RefreshUI();
   }
 
   private void Update()
@@ -59,15 +58,15 @@ public class DateMoodUI : MonoBehaviour
     if (!m_animating)
       StartCoroutine(FadeInAndOut());
 
-    float intensityRamp = (float)m_moodIntensity / GameGlobals.Instance.MaxIntensity;
+    // float intensityRamp = (float)m_moodIntensity / GameGlobals.Instance.MaxIntensity;
     
-    float h, s, v;
+    // float h, s, v;
     Color baseColor = GameGlobals.Instance.MoodColors[(int)MoodColor];
-    Color.RGBToHSV(baseColor, out h, out s, out v);
-    s = intensityRamp;
-    Color saturatedColor = Color.HSVToRGB(h, s, v);
+    // Color.RGBToHSV(baseColor, out h, out s, out v);
+    // s = intensityRamp;
+    // Color saturatedColor = Color.HSVToRGB(h, s, v);
 
-    m_moodColorImage.color = saturatedColor;
+    m_moodColorImage.color = baseColor;
     m_moodColorImage.sprite = m_colorIcons[(int)MoodColor];
   }
 
@@ -77,7 +76,7 @@ public class DateMoodUI : MonoBehaviour
 
     const float duration = 1.0f;
     float startTime = Time.time;
-    while (Time.time < startTime + duration)
+    while (Time.time <= startTime + duration + 0.1f)
     {
       float t = (Time.time - startTime) / duration;
       Color color = m_moodColorImage.color;
@@ -89,7 +88,7 @@ public class DateMoodUI : MonoBehaviour
     yield return new WaitForSeconds(2.0f);
 
     startTime = Time.time;
-    while (Time.time < startTime + duration)
+    while (Time.time <= startTime + duration + 0.1f)
     {
       float t = (Time.time - startTime) / duration;
       Color color = m_moodColorImage.color;
