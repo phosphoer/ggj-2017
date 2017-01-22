@@ -11,6 +11,8 @@ public class GameEndCondition : MonoBehaviour
     public string[] Messages;
   }
 
+  public static event System.Action MinuteElapsed;
+
   [SerializeField]
   private Image m_fadeToBlackImage;
 
@@ -37,6 +39,8 @@ public class GameEndCondition : MonoBehaviour
   {
     m_gameStartTime = Time.time;
     m_loseText.SetActive(false);
+
+    StartCoroutine(MinuteCounter());
 
     DateMood.MoodCentered += OnMoodCentered;
     DateMood.MoodOutOfControl += OnMoodOutOfControl;
@@ -72,6 +76,19 @@ public class GameEndCondition : MonoBehaviour
   private void OnMoodOutOfControl(DateMood dateMood)
   {
     StartCoroutine(EndAnimation());
+  }
+
+  private IEnumerator MinuteCounter()
+  {
+    while (!m_ending)
+    {
+      yield return new WaitForSeconds(60.0f);
+
+      if (MinuteElapsed != null)
+      {
+        MinuteElapsed();
+      }
+    }
   }
 
   private IEnumerator WinAnimation()

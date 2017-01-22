@@ -29,9 +29,12 @@ public class DateMood : MonoBehaviour
 
   private MoodColor m_moodColor;
   private int m_moodIntensity;
+  private int m_currentTimeIcon;
 
   [SerializeField]
   private DateMoodUI m_moodUI;
+  [SerializeField]
+  private GameObject[] m_timeIcons;
   [SerializeField]
   private Animator m_animator;
 
@@ -171,12 +174,15 @@ public class DateMood : MonoBehaviour
     MoodColor = MoodColor.Blue;
     MoodIntensity = 2;
 
+    GameEndCondition.MinuteElapsed += OnMinuteElapsed;
+
     StartCoroutine(MoodDriftRoutine());
   }
 
   private void OnDestroy()
   {
     MoodColorZone.MoodZoneActivated -= OnMoodZoneActivated;
+    GameEndCondition.MinuteElapsed -= OnMinuteElapsed;
   }
 
   private void RandomizeMood()
@@ -187,16 +193,29 @@ public class DateMood : MonoBehaviour
     MoodIntensity = Random.Range(3, 5);
   }
 
+  private void OnMinuteElapsed()
+  {
+    StartCoroutine(ShowTimeIcon(m_timeIcons[m_currentTimeIcon]));
+    m_currentTimeIcon = Mathf.Min(m_timeIcons.Length - 1, m_currentTimeIcon + 1);
+  }
+
   private void OnMoodZoneActivated(MoodColorZone moodZone, MoodColor desiredColor)
   {
     StartCoroutine(WaitToDoMoodEffect(moodZone, desiredColor));
+  }
+
+  private IEnumerator ShowTimeIcon(GameObject timeIcon)
+  {
+    timeIcon.SetActive(true);
+    yield return new WaitForSeconds(2.0f);
+    timeIcon.SetActive(false);
   }
 
   private IEnumerator MoodDriftRoutine()
   {
     while (true)
     {
-      yield return new WaitForSeconds(30.0f);
+      yield return new WaitForSeconds(35.0f);
       ApplyMoodEffect(MoodColor, 1);
     }
   }
