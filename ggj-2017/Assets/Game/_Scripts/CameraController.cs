@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
@@ -10,6 +11,41 @@ public class CameraController : MonoBehaviour
   private float m_lerpDist;
   private Vector3 m_lastFollowObjectPos;
   private float m_lastObjectMoveTime;
+  private Vector3 m_startPos;
+  private Quaternion m_startRot;
+  private bool m_atTitle = true;
+
+  [SerializeField]
+  private GameObject m_titleRoot;
+
+  [SerializeField]
+  private Transform m_titleTransform;
+
+  [SerializeField]
+  private Transform m_cameraTransform;
+
+  private void Start()
+  {
+    m_startPos = m_cameraTransform.localPosition;
+    m_startRot = m_cameraTransform.localRotation;
+
+    m_cameraTransform.LookAt(m_titleTransform, Vector3.up);
+  }
+
+  private void Update()
+  {
+    if (!Rewired.ReInput.isReady)
+      return;
+
+    if (m_atTitle)
+    {
+      var playerInput = GameGlobals.Instance.PlayerController.PlayerInput;
+      if (playerInput.GetAnyButtonDown())
+      {
+        StartCoroutine(AnimateFromTitle());
+      }
+    }
+  }
 
   private void LateUpdate()
   {
@@ -50,5 +86,20 @@ public class CameraController : MonoBehaviour
 
       m_lastFollowObjectPos = FollowObject.position;
     }
+  }
+
+  private IEnumerator AnimateFromTitle()
+  {
+    const float duration = 3.0f;
+    float startTime = Time.time;
+    Quaternion rotBegin = m_cameraTransform.localRotation;
+    while (Time.time < startTime + duration)
+    {
+      float t = (Time.time - startTime) / duration;
+      m_cameraTransform.localRotation = Quaternion.Lerp(rotBegin, m_startRot, t);
+      yield return null; 
+    }
+
+    m_titleRoot.SetActive(false);
   }
 }
