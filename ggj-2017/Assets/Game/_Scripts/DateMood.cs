@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class DateMood : MonoBehaviour
 {
@@ -180,6 +181,12 @@ public class DateMood : MonoBehaviour
 
   private void OnMoodZoneActivated(MoodColorZone moodZone, MoodColor desiredColor)
   {
+    StartCoroutine(WaitToDoMoodEffect(moodZone, desiredColor));
+  }
+
+  private IEnumerator WaitToDoMoodEffect(MoodColorZone moodZone, MoodColor desiredColor)
+  {
+    yield return new WaitForSeconds(2.0f);
     ApplyMoodEffect(desiredColor, moodZone.MoodIntensity);
   }
 }

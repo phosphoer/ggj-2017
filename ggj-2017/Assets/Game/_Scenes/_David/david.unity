@@ -271,8 +271,7 @@ Prefab:
       propertyPath: FollowObject
       value: 
       objectReference: {fileID: 541048142}
-    m_RemovedComponents:
-    - {fileID: 65490358139173142, guid: 1f1348f9555384ec6ae5ebe3e4674762, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f1348f9555384ec6ae5ebe3e4674762, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1318068254
@@ -560,24 +559,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07a86ea4273454082b7af18c31b182d7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1727566413 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1255725707355772, guid: 1f1348f9555384ec6ae5ebe3e4674762,
-    type: 2}
-  m_PrefabInternal: {fileID: 1297856001}
---- !u!136 &1727566414
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1727566413}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.48, z: 0}
 --- !u!1 &1845161652
 GameObject:
   m_ObjectHideFlags: 0

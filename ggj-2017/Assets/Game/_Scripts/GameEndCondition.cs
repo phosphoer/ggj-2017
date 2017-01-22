@@ -32,7 +32,7 @@ public class GameEndCondition : MonoBehaviour
 
   private IEnumerator EndAnimation()
   {
-    const float duration = 1.0f;
+    const float duration = 3.0f;
     float startTime = Time.time;
     while (Time.time < startTime + duration)
     {
