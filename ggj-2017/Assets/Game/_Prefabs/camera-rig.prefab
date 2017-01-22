@@ -315,7 +315,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 49e5fc4373d394f9088482d6dffc8d38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e38c381fa035c1242b780e637cf1d4dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   quality: 1
-  blurArea: 4.68
+  blurArea: 3.5
   maxBlurSize: 6.8
   downsample: 0
   tiltShiftShader: {fileID: 4800000, guid: bf34d2a25450349699e8ae6456fa7ca9, type: 3}
