@@ -1011,7 +1011,23 @@ MonoBehaviour:
   m_loseText: {fileID: 1611352355449738}
   m_winText: {fileID: 114329103013026226}
   m_fadeToWhiteImage: {fileID: 114252607622634104}
-  m_endMessages: []
+  m_endMessages:
+  - Messages:
+    - Well that sucked!
+    - Worst date I've ever had.
+    - Wow, you're kind of a shit bag.
+  - Messages:
+    - That wasn't so bad I guess.
+    - Meh.
+    - Don't expect me to call you.
+  - Messages:
+    - I had a good time.
+    - Thanks for the fun date!
+    - Let's do it again!
+  - Messages:
+    - That was such a good time!
+    - I had so much fun tonight!
+    - Let's go back to my place ; )
 --- !u!222 &222297750521883934
 CanvasRenderer:
   m_ObjectHideFlags: 1
