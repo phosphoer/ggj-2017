@@ -68,7 +68,7 @@ public class EscortController : MonoBehaviour
       if (FollowObject != null)
       {
         NavMesh.CalculatePath(transform.position, FollowObject.transform.position, NavMesh.AllAreas, m_path);
-        m_currentPathIndex = 0;
+        m_currentPathIndex = 1;
       }
 
       yield return new WaitForSeconds(1.0f);
