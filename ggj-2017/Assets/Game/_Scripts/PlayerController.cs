@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private DudeController m_character;
 
+  [SerializeField]
+  private Animator m_animator;
+
   private Rewired.Player m_rewiredPlayer;
   private MoodColorZone m_currentMoodZone;
   private ColorPickerUI m_colorPicker;
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
       m_currentMoodZone.HideInteractionPrompt();
       m_colorPicker = Instantiate(m_colorPickerUIPrefab);
+      if (m_animator != null) m_animator.SetTrigger("InteractGreen");
     }
     
     // Color input
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour
         m_colorPicker.ChooseColor(MoodColor.Red);
         m_currentMoodZone.ChooseMoodColor(MoodColor.Red);
         m_currentMoodZone = null;      
+        if (m_animator != null) m_animator.SetTrigger("InteractRed");
       }
 
       if (m_rewiredPlayer.GetButtonDown("ColorBlue"))
@@ -52,6 +57,7 @@ public class PlayerController : MonoBehaviour
         m_colorPicker.ChooseColor(MoodColor.Blue);
         m_currentMoodZone.ChooseMoodColor(MoodColor.Blue);
         m_currentMoodZone = null;      
+        if (m_animator != null) m_animator.SetTrigger("InteractBlue");
       }
 
       if (m_rewiredPlayer.GetButtonDown("ColorYellow"))
@@ -59,6 +65,7 @@ public class PlayerController : MonoBehaviour
         m_colorPicker.ChooseColor(MoodColor.Yellow);
         m_currentMoodZone.ChooseMoodColor(MoodColor.Yellow);
         m_currentMoodZone = null;      
+        if (m_animator != null) m_animator.SetTrigger("InteractYellow");
       }
     }
 
