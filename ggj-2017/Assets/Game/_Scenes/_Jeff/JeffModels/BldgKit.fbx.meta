@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 3712427cf62fcc140b0dc2c25ef6f048
+timeCreated: 1485048433
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Building
+    100004: Door
+    100006: doorframe
+    100008: polySurface1
+    100010: polySurface3
+    100012: smallwindowglass
+    100014: windowLarg
+    100016: windowlargeglass
+    100018: WindowSmall
+    100020: doorglassbtm
+    100022: doorglasstop
+    100024: smallwindowframe
+    100026: Step
+    100028: windowlargeframe
+    400000: //RootNode
+    400002: Building
+    400004: Door
+    400006: doorframe
+    400008: polySurface1
+    400010: polySurface3
+    400012: smallwindowglass
+    400014: windowLarg
+    400016: windowlargeglass
+    400018: WindowSmall
+    400020: doorglassbtm
+    400022: doorglasstop
+    400024: smallwindowframe
+    400026: Step
+    400028: windowlargeframe
+    2300000: Building
+    2300002: doorframe
+    2300004: smallwindowglass
+    2300006: windowlargeglass
+    2300008: doorglassbtm
+    2300010: doorglasstop
+    2300012: smallwindowframe
+    2300014: Step
+    2300016: windowlargeframe
+    3300000: Building
+    3300002: doorframe
+    3300004: smallwindowglass
+    3300006: windowlargeglass
+    3300008: doorglassbtm
+    3300010: doorglasstop
+    3300012: smallwindowframe
+    3300014: Step
+    3300016: windowlargeframe
+    4300000: Building
+    4300002: smallwindowglass
+    4300004: windowlargeglass
+    4300006: doorframe
+    4300008: Step
+    4300010: smallwindowframe
+    4300012: windowlargeframe
+    4300014: doorglassbtm
+    4300016: doorglasstop
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 350
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
