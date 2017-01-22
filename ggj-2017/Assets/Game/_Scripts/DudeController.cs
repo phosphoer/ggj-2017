@@ -11,6 +11,9 @@ public class DudeController : MonoBehaviour
     set { m_moveDirection = value; }
   }
 
+  [SerializeField]
+  private Animator m_animator;
+
   private Rigidbody m_rb;
   private Vector3 m_facingDirection;
   private Vector3 m_moveDirection;
@@ -32,6 +35,11 @@ public class DudeController : MonoBehaviour
     if (MoveDirection.sqrMagnitude > Mathf.Epsilon)
     {
       m_facingDirection = MoveDirection;
+      if (m_animator != null) m_animator.SetBool("Walking", true);
+    }
+    else 
+    {
+      if (m_animator != null) m_animator.SetBool("Walking", false);
     }
 
     // Face in our movement direction

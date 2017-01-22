@@ -223,7 +223,7 @@ ModelImporter:
     13700014: Undershirt
     13700016: Vest
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

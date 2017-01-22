@@ -98,11 +98,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114046784287257012, guid: 1f1348f9555384ec6ae5ebe3e4674762,
-        type: 2}
-      propertyPath: m_moodIntensityScales.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4634036459426668, guid: 1f1348f9555384ec6ae5ebe3e4674762, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.31
@@ -140,16 +135,6 @@ Prefab:
       propertyPath: FollowObject
       value: 
       objectReference: {fileID: 541048142}
-    - target: {fileID: 114046784287257012, guid: 1f1348f9555384ec6ae5ebe3e4674762,
-        type: 2}
-      propertyPath: m_moodIntensityScales.Array.data[4]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114046784287257012, guid: 1f1348f9555384ec6ae5ebe3e4674762,
-        type: 2}
-      propertyPath: m_moodIntensityScales.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f1348f9555384ec6ae5ebe3e4674762, type: 2}
   m_IsPrefabParent: 0
@@ -497,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 2
+  m_animator: {fileID: 0}
 --- !u!54 &1060147165
 Rigidbody:
   m_ObjectHideFlags: 0

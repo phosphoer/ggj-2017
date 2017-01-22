@@ -269,7 +269,7 @@ ModelImporter:
     13700012: Shoe_L
     13700014: Shoe_R
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
