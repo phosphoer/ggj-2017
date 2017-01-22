@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: f2d3d813b2fdb2445b6aafc5a00995fe
+timeCreated: 1485081024
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Awning
+    100002: AwningLeg
+    100004: AwningLeg1
+    100006: Door
+    100008: Door1
+    100010: DoorWindowGlass
+    100012: DoorWindowGlass1
+    100014: polySurface33
+    100016: //RootNode
+    100018: RestaurantBuilding
+    100020: SandwichBoard
+    100022: SandwichBoard1
+    100024: SandwichBoardLegs
+    100026: StringLights
+    100028: windowlargeglass
+    100030: windowlargeglass1
+    400000: Awning
+    400002: AwningLeg
+    400004: AwningLeg1
+    400006: Door
+    400008: Door1
+    400010: DoorWindowGlass
+    400012: DoorWindowGlass1
+    400014: polySurface33
+    400016: //RootNode
+    400018: RestaurantBuilding
+    400020: SandwichBoard
+    400022: SandwichBoard1
+    400024: SandwichBoardLegs
+    400026: StringLights
+    400028: windowlargeglass
+    400030: windowlargeglass1
+    2300000: Awning
+    2300002: AwningLeg
+    2300004: AwningLeg1
+    2300006: Door
+    2300008: Door1
+    2300010: DoorWindowGlass
+    2300012: DoorWindowGlass1
+    2300014: polySurface33
+    2300016: RestaurantBuilding
+    2300018: SandwichBoard
+    2300020: SandwichBoard1
+    2300022: SandwichBoardLegs
+    2300024: StringLights
+    2300026: windowlargeglass
+    2300028: windowlargeglass1
+    3300000: Awning
+    3300002: AwningLeg
+    3300004: AwningLeg1
+    3300006: Door
+    3300008: Door1
+    3300010: DoorWindowGlass
+    3300012: DoorWindowGlass1
+    3300014: polySurface33
+    3300016: RestaurantBuilding
+    3300018: SandwichBoard
+    3300020: SandwichBoard1
+    3300022: SandwichBoardLegs
+    3300024: StringLights
+    3300026: windowlargeglass
+    3300028: windowlargeglass1
+    4300000: RestaurantBuilding
+    4300002: windowlargeglass
+    4300004: DoorWindowGlass1
+    4300006: Door1
+    4300008: Door
+    4300010: DoorWindowGlass
+    4300012: windowlargeglass1
+    4300014: Awning
+    4300016: AwningLeg
+    4300018: AwningLeg1
+    4300020: StringLights
+    4300022: polySurface33
+    4300024: SandwichBoard
+    4300026: SandwichBoard1
+    4300028: SandwichBoardLegs
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 350
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
