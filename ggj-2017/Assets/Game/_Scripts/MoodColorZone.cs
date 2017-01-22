@@ -134,7 +134,7 @@ public class MoodColorZone : MonoBehaviour
 
   private IEnumerator AnimateColorTo(MoodColor toMoodColor)
   {
-    const float duration = 1.0f;
+    const float duration = 2.0f;
     float startTime = Time.time;
     Color currentColor = GameGlobals.Instance.MoodColors[(int)MoodColor];
     Color toColor = GameGlobals.Instance.MoodColors[(int)toMoodColor];
@@ -142,14 +142,30 @@ public class MoodColorZone : MonoBehaviour
     {
       float t = (Time.time - startTime) / duration;
       m_sharedMaterial.SetColor("_Color", Color.Lerp(currentColor, toColor, t));
+
+      foreach (Renderer r in GameGlobals.Instance.DateRenderers)
+      {
+        if (r != null)
+          r.sharedMaterial.SetColor("_Color", Color.Lerp(Color.white, toColor, t));
+      }
+
       yield return null; 
     }
+
+    yield return new WaitForSeconds(2.0f);
 
     startTime = Time.time + duration;
     while (Time.time < startTime + duration)
     {
       float t = (Time.time - startTime) / duration;
       m_sharedMaterial.SetColor("_Color", Color.Lerp(toColor, currentColor, t));
+
+      foreach (Renderer r in GameGlobals.Instance.DateRenderers)
+      {
+        if (r != null)
+          r.sharedMaterial.SetColor("_Color", Color.Lerp(toColor, Color.white, t));
+      }
+
       yield return null; 
     }
   }
