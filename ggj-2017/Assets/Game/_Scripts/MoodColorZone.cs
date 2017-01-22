@@ -14,6 +14,9 @@ public class MoodColorZone : MonoBehaviour
   [SerializeField]
   private Renderer[] m_moodZoneRenderers;
 
+  [SerializeField]
+  private WaypointAI m_connectedWaypointAI;
+
   private GameObject m_interactionPrompt;
   private Material m_sharedMaterial;
 
@@ -65,6 +68,9 @@ public class MoodColorZone : MonoBehaviour
   {
     m_interactionPrompt = Instantiate(GameGlobals.Instance.InteractPromptPrefab);
     m_interactionPrompt.transform.position = m_focusTransform.position;
+
+    if (m_connectedWaypointAI != null)
+      m_connectedWaypointAI.CanWalk = false;
   }
 
   public void HideInteractionPrompt()
@@ -74,6 +80,9 @@ public class MoodColorZone : MonoBehaviour
       Destroy(m_interactionPrompt);
       m_interactionPrompt = null;
     }
+
+    if (m_connectedWaypointAI != null)
+      m_connectedWaypointAI.CanWalk = true;
   }
 
   public void ChooseMoodColor(MoodColor moodColorToMix)
