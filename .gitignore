@@ -26,3 +26,5 @@ sysinfo.txt
 *.sublime-workspace
 
 .vscode/
+ggj-2017/Assets/Game/_Models/Materials/lambert2.mat
+ggj-2017/Assets/Game/_Models/Materials/lambert2.mat.meta

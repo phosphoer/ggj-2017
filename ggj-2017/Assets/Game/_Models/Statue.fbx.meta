@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 395f78b68a8bf8b4e848928f5245364e
+timeCreated: 1485070409
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Coat
+    100002: Face
+    100004: Hand_L
+    100006: Hand_R
+    100008: Head
+    100010: Pants
+    100012: Shoe_L
+    100014: Shoe_R
+    100016: //RootNode
+    100018: Shoe_L1
+    100020: transform1
+    100022: transform2
+    100024: transform3
+    100026: transform4
+    100028: transform5
+    100030: transform6
+    100032: transform7
+    100034: transform8
+    400000: Coat
+    400002: Face
+    400004: Hand_L
+    400006: Hand_R
+    400008: Head
+    400010: Pants
+    400012: Shoe_L
+    400014: Shoe_R
+    400016: //RootNode
+    400018: Shoe_L1
+    400020: transform1
+    400022: transform2
+    400024: transform3
+    400026: transform4
+    400028: transform5
+    400030: transform6
+    400032: transform7
+    400034: transform8
+    2300000: Coat
+    2300002: Face
+    2300004: Hand_L
+    2300006: Hand_R
+    2300008: Head
+    2300010: Pants
+    2300012: Shoe_L
+    2300014: Shoe_R
+    2300016: Shoe_L1
+    3300000: Coat
+    3300002: Face
+    3300004: Hand_L
+    3300006: Hand_R
+    3300008: Head
+    3300010: Pants
+    3300012: Shoe_L
+    3300014: Shoe_R
+    3300016: Shoe_L1
+    4300000: Shoe_L
+    4300002: Pants
+    4300004: Hand_L
+    4300006: Head
+    4300008: Coat
+    4300010: Hand_R
+    4300012: Shoe_R
+    4300014: Face
+    4300016: Shoe_L1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
