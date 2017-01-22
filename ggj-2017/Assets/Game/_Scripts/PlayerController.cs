@@ -16,6 +16,15 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private Animator m_animator;
 
+  [SerializeField]
+  private AudioClip m_soundRed;
+
+  [SerializeField]
+  private AudioClip m_soundBlue;
+
+  [SerializeField]
+  private AudioClip m_soundYellow;
+
   private Rewired.Player m_rewiredPlayer;
   private MoodColorZone m_currentMoodZone;
   private ColorPickerUI m_colorPicker;
@@ -50,6 +59,8 @@ public class PlayerController : MonoBehaviour
         m_currentMoodZone.ChooseMoodColor(MoodColor.Red);
         m_currentMoodZone = null;      
         if (m_animator != null) m_animator.SetTrigger("InteractRed");
+
+        GetComponent<AudioSource>().PlayOneShot(m_soundRed);
       }
 
       if (m_rewiredPlayer.GetButtonDown("ColorBlue"))
@@ -58,6 +69,8 @@ public class PlayerController : MonoBehaviour
         m_currentMoodZone.ChooseMoodColor(MoodColor.Blue);
         m_currentMoodZone = null;      
         if (m_animator != null) m_animator.SetTrigger("InteractBlue");
+
+        GetComponent<AudioSource>().PlayOneShot(m_soundBlue);
       }
 
       if (m_rewiredPlayer.GetButtonDown("ColorYellow"))
@@ -66,6 +79,8 @@ public class PlayerController : MonoBehaviour
         m_currentMoodZone.ChooseMoodColor(MoodColor.Yellow);
         m_currentMoodZone = null;      
         if (m_animator != null) m_animator.SetTrigger("InteractYellow");
+
+        GetComponent<AudioSource>().PlayOneShot(m_soundYellow);
       }
     }
 

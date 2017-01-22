@@ -32,6 +32,10 @@ public class DateMood : MonoBehaviour
   private int m_currentTimeIcon;
 
   [SerializeField]
+  private AudioClip m_happySound;
+  [SerializeField]
+  private AudioClip m_sadSound;
+  [SerializeField]
   private DateMoodUI m_moodUI;
   [SerializeField]
   private GameObject[] m_timeIcons;
@@ -65,10 +69,10 @@ public class DateMood : MonoBehaviour
 
       // In this case we just lower our intensity by the zone intensity 
       int newIntensity = MoodIntensity - moodBaseIntensity;
+      MoodIntensity = Mathf.Abs(newIntensity);
       if (newIntensity < 0)
       {
         MoodColor = appliedColor;
-        MoodIntensity = Mathf.Abs(newIntensity);
         Debug.Log("Went across the goal over to " + MoodColor.ToString());
       }
     }
@@ -139,10 +143,14 @@ public class DateMood : MonoBehaviour
     if (MoodIntensity >= originalIntensity)
     {
       if (m_animator != null) m_animator.SetTrigger("EmoteNegative");
+
+      GetComponent<AudioSource>().PlayOneShot(m_sadSound);
     }
     else
     {
       if (m_animator != null) m_animator.SetTrigger("EmotePositive");
+
+      GetComponent<AudioSource>().PlayOneShot(m_happySound);
     }
 
     // Send mood events if necessary 

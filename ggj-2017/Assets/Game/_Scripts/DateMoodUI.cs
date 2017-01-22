@@ -12,7 +12,7 @@ public class DateMoodUI : MonoBehaviour
       if (m_moodIntensity != value)
       {
         m_moodIntensity = value;
-        RefreshUI();
+        m_uiNeedsUpdate = true;
       }
     }
   }
@@ -25,7 +25,7 @@ public class DateMoodUI : MonoBehaviour
       if (m_moodColor != value)
       {
         m_moodColor = value;
-        RefreshUI();
+        m_uiNeedsUpdate = true;
       }
     }
   }
@@ -38,10 +38,20 @@ public class DateMoodUI : MonoBehaviour
   private int m_moodIntensity;
   private MoodColor m_moodColor;
   private bool m_animating;
+  private bool m_uiNeedsUpdate;
 
   private void Start()
   {
     RefreshUI();
+  }
+
+  private void Update()
+  {
+    if (m_uiNeedsUpdate)
+    {
+      RefreshUI();
+      m_uiNeedsUpdate = false;
+    }
   }
 
   private void RefreshUI()
@@ -59,7 +69,6 @@ public class DateMoodUI : MonoBehaviour
 
     m_moodColorImage.color = saturatedColor;
     m_moodColorImage.sprite = m_colorIcons[(int)MoodColor];
-    m_moodColorImage.transform.localScale = Vector3.one * (Mathf.Max(intensityRamp, 0.25f));
   }
 
   private IEnumerator FadeInAndOut()
