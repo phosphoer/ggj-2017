@@ -160,10 +160,12 @@ public class DateMood : MonoBehaviour
 
   private void Start()
   {
-    // RandomizeMood();
+    RandomizeMood();
     MoodColorZone.MoodZoneActivated += OnMoodZoneActivated;
     MoodColor = MoodColor.Blue;
     MoodIntensity = 2;
+
+    StartCoroutine(MoodDriftRoutine());
   }
 
   private void OnDestroy()
@@ -176,12 +178,21 @@ public class DateMood : MonoBehaviour
     int colorCount = System.Enum.GetNames(typeof(MoodColor)).Length;
     int moodChoice = Random.Range(0, colorCount);
     MoodColor = (MoodColor)moodChoice;
-    MoodIntensity = Random.Range(1, 3);
+    MoodIntensity = Random.Range(3, 5);
   }
 
   private void OnMoodZoneActivated(MoodColorZone moodZone, MoodColor desiredColor)
   {
     StartCoroutine(WaitToDoMoodEffect(moodZone, desiredColor));
+  }
+
+  private IEnumerator MoodDriftRoutine()
+  {
+    while (true)
+    {
+      yield return new WaitForSeconds(30.0f);
+      ApplyMoodEffect(MoodColor, 1);
+    }
   }
 
   private IEnumerator WaitToDoMoodEffect(MoodColorZone moodZone, MoodColor desiredColor)
