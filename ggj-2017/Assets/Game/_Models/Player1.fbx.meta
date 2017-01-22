@@ -525,8 +525,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle1
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 1
+      firstFrame: 25
+      lastFrame: 72
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -758,8 +758,8 @@ ModelImporter:
     - serializedVersion: 16
       name: InteractRed
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 24
+      firstFrame: 73
+      lastFrame: 121
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -991,8 +991,8 @@ ModelImporter:
     - serializedVersion: 16
       name: InteractBlue
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 24
+      firstFrame: 122
+      lastFrame: 170
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1224,8 +1224,8 @@ ModelImporter:
     - serializedVersion: 16
       name: InteractYellow
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 24
+      firstFrame: 171
+      lastFrame: 219
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1457,8 +1457,8 @@ ModelImporter:
     - serializedVersion: 16
       name: InteractGreen
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 24
+      firstFrame: 220
+      lastFrame: 242
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
