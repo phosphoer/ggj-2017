@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: 40a0e66c91161b7428cc4ec7655e4d17
+timeCreated: 1485117314
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_L
+    100002: Arm_R
+    100004: Face
+    100006: Head
+    100008: Head 1
+    100010: ikHandle10
+    100012: ikHandle11
+    100014: ikHandle12
+    100016: ikHandle13
+    100018: ikHandle14
+    100020: ikHandle5
+    100022: ikHandle6
+    100024: ikHandle6 1
+    100026: ikHandle7
+    100028: ikHandle7 1
+    100030: ikHandle8
+    100032: ikHandle8 1
+    100034: ikHandle9
+    100036: joint1
+    100038: joint2
+    100040: joint2 1
+    100042: joint3
+    100044: joint3 1
+    100046: joint4
+    100048: joint4 1
+    100050: joint5
+    100052: L_Ankle
+    100054: L_Ear1
+    100056: L_Ear2
+    100058: L_Elbow
+    100060: L_Fingers
+    100062: L_Foot
+    100064: L_Hand
+    100066: L_Hip
+    100068: L_Knee
+    100070: L_Palm
+    100072: L_Scapula
+    100074: L_Shoulder
+    100076: L_Thumb1
+    100078: L_Thumb2
+    100080: L_Thumb3
+    100082: L_Toe
+    100084: L_Wrist
+    100086: LEar_Manip
+    100088: LElbow_PV
+    100090: LFinger1_Manip
+    100092: LFinger2_Manip
+    100094: LFinger2_Manip 1
+    100096: LFoot_Manip
+    100098: LKnee_PV
+    100100: LScap_Manip
+    100102: LThumb1_Manip
+    100104: LThumb2_Mani
+    100106: LWrist_Manip
+    100108: MAIN
+    100110: Master_Manip
+    100112: Neck
+    100114: Neck_Manip
+    100116: nurbsCircle1
+    100118: nurbsCircle2
+    100120: nurbsCircle3
+    100122: Pants
+    100124: PHONE
+    100126: //RootNode
+    100128: R_Ankle
+    100130: R_Ear1
+    100132: R_Ear2
+    100134: R_Elbow
+    100136: R_Fingers
+    100138: R_Foot
+    100140: R_Hand
+    100142: R_Hip
+    100144: R_Knee
+    100146: R_Palm
+    100148: R_Scapula
+    100150: R_Shoulder
+    100152: R_Thumb1
+    100154: R_Thumb2
+    100156: R_Thumb3
+    100158: R_Toe
+    100160: R_Wrist
+    100162: REar_Manip
+    100164: RElbow_PV
+    100166: RFinger1_Manip
+    100168: RFoot_Manip
+    100170: RKnee_PV
+    100172: RScap_Manip
+    100174: RThumb1_Manip
+    100176: RThumb2_Manip
+    100178: RWrist_Manip
+    100180: Shoe_L
+    100182: Shoe_R
+    100184: Spine1
+    100186: Spine2
+    100188: Spine3
+    100190: Undershirt
+    100192: Vest
+    100194: Wasit_Manip
+    400000: Arm_L
+    400002: Arm_R
+    400004: Face
+    400006: Head
+    400008: Head 1
+    400010: ikHandle10
+    400012: ikHandle11
+    400014: ikHandle12
+    400016: ikHandle13
+    400018: ikHandle14
+    400020: ikHandle5
+    400022: ikHandle6
+    400024: ikHandle6 1
+    400026: ikHandle7
+    400028: ikHandle7 1
+    400030: ikHandle8
+    400032: ikHandle8 1
+    400034: ikHandle9
+    400036: joint1
+    400038: joint2
+    400040: joint2 1
+    400042: joint3
+    400044: joint3 1
+    400046: joint4
+    400048: joint4 1
+    400050: joint5
+    400052: L_Ankle
+    400054: L_Ear1
+    400056: L_Ear2
+    400058: L_Elbow
+    400060: L_Fingers
+    400062: L_Foot
+    400064: L_Hand
+    400066: L_Hip
+    400068: L_Knee
+    400070: L_Palm
+    400072: L_Scapula
+    400074: L_Shoulder
+    400076: L_Thumb1
+    400078: L_Thumb2
+    400080: L_Thumb3
+    400082: L_Toe
+    400084: L_Wrist
+    400086: LEar_Manip
+    400088: LElbow_PV
+    400090: LFinger1_Manip
+    400092: LFinger2_Manip
+    400094: LFinger2_Manip 1
+    400096: LFoot_Manip
+    400098: LKnee_PV
+    400100: LScap_Manip
+    400102: LThumb1_Manip
+    400104: LThumb2_Mani
+    400106: LWrist_Manip
+    400108: MAIN
+    400110: Master_Manip
+    400112: Neck
+    400114: Neck_Manip
+    400116: nurbsCircle1
+    400118: nurbsCircle2
+    400120: nurbsCircle3
+    400122: Pants
+    400124: PHONE
+    400126: //RootNode
+    400128: R_Ankle
+    400130: R_Ear1
+    400132: R_Ear2
+    400134: R_Elbow
+    400136: R_Fingers
+    400138: R_Foot
+    400140: R_Hand
+    400142: R_Hip
+    400144: R_Knee
+    400146: R_Palm
+    400148: R_Scapula
+    400150: R_Shoulder
+    400152: R_Thumb1
+    400154: R_Thumb2
+    400156: R_Thumb3
+    400158: R_Toe
+    400160: R_Wrist
+    400162: REar_Manip
+    400164: RElbow_PV
+    400166: RFinger1_Manip
+    400168: RFoot_Manip
+    400170: RKnee_PV
+    400172: RScap_Manip
+    400174: RThumb1_Manip
+    400176: RThumb2_Manip
+    400178: RWrist_Manip
+    400180: Shoe_L
+    400182: Shoe_R
+    400184: Spine1
+    400186: Spine2
+    400188: Spine3
+    400190: Undershirt
+    400192: Vest
+    400194: Wasit_Manip
+    2300000: PHONE
+    3300000: PHONE
+    4300000: Shoe_L
+    4300002: Pants
+    4300004: Shoe_R
+    4300006: Face
+    4300008: Head
+    4300010: Vest
+    4300012: Undershirt
+    4300014: Arm_R
+    4300016: Arm_L
+    4300018: PHONE
+    7400000: CheckPhone
+    9500000: //RootNode
+    13700000: Arm_L
+    13700002: Arm_R
+    13700004: Face
+    13700006: Head
+    13700008: Pants
+    13700010: Shoe_L
+    13700012: Shoe_R
+    13700014: Undershirt
+    13700016: Vest
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CheckPhone
+      takeName: Take 001
+      firstFrame: 169
+      lastFrame: 216
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm_L
+        weight: 1
+      - path: Arm_R
+        weight: 1
+      - path: Face
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Master_Manip
+        weight: 1
+      - path: Master_Manip/ikHandle11
+        weight: 1
+      - path: Master_Manip/ikHandle13
+        weight: 1
+      - path: Master_Manip/ikHandle14
+        weight: 1
+      - path: Master_Manip/joint1
+        weight: 1
+      - path: Master_Manip/joint1/joint2
+        weight: 1
+      - path: Master_Manip/joint1/joint2/ikHandle8
+        weight: 1
+      - path: Master_Manip/joint1/joint2/joint3
+        weight: 1
+      - path: Master_Manip/joint1/joint2/joint3/ikHandle7
+        weight: 1
+      - path: Master_Manip/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: Master_Manip/joint1/joint2/joint3/joint4/ikHandle6
+        weight: 1
+      - path: Master_Manip/joint5
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/ikHandle8 1
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/ikHandle10
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/ikHandle12
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1/ikHandle7 1
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1/ikHandle9
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1/joint4 1
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1/joint4 1/ikHandle5
+        weight: 1
+      - path: Master_Manip/joint5/joint2 1/joint3 1/joint4 1/ikHandle6 1
+        weight: 1
+      - path: Master_Manip/LFoot_Manip
+        weight: 1
+      - path: Master_Manip/LKnee_PV
+        weight: 1
+      - path: Master_Manip/nurbsCircle2
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LElbow_PV
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LWrist_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LWrist_Manip/LFinger1_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LWrist_Manip/LFinger1_Manip/LFinger2_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LWrist_Manip/LThumb1_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/LScap_Manip/LWrist_Manip/LThumb1_Manip/LThumb2_Mani
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/Neck_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/Neck_Manip/LEar_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/Neck_Manip/REar_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RElbow_PV
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RWrist_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RWrist_Manip/RFinger1_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RWrist_Manip/RFinger1_Manip/LFinger2_Manip
+          1
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RWrist_Manip/RThumb1_Manip
+        weight: 1
+      - path: Master_Manip/nurbsCircle2/nurbsCircle1/nurbsCircle3/RScap_Manip/RWrist_Manip/RThumb1_Manip/RThumb2_Manip
+        weight: 1
+      - path: Master_Manip/RFoot_Manip
+        weight: 1
+      - path: Master_Manip/RKnee_PV
+        weight: 1
+      - path: Master_Manip/Wasit_Manip
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/L_Hip
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/L_Hip/L_Knee
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/L_Hip/L_Knee/L_Ankle
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/L_Hip/L_Knee/L_Ankle/L_Foot
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/L_Hip/L_Knee/L_Ankle/L_Foot/L_Toe
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/R_Hip
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/R_Hip/R_Knee
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/R_Hip/R_Knee/R_Ankle
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/R_Hip/R_Knee/R_Ankle/R_Foot
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/R_Hip/R_Knee/R_Ankle/R_Foot/R_Toe
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand/L_Palm
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand/L_Palm/L_Fingers
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand/L_Thumb1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand/L_Thumb1/L_Thumb2
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/L_Scapula/L_Shoulder/L_Elbow/L_Wrist/L_Hand/L_Thumb1/L_Thumb2/L_Thumb3
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck/Head 1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck/Head 1/L_Ear1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck/Head 1/L_Ear1/L_Ear2
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck/Head 1/R_Ear1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/Neck/Head 1/R_Ear1/R_Ear2
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand/R_Palm
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand/R_Palm/R_Fingers
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand/R_Thumb1
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand/R_Thumb1/R_Thumb2
+        weight: 1
+      - path: Master_Manip/Wasit_Manip/MAIN/Spine1/Spine2/Spine3/R_Scapula/R_Shoulder/R_Elbow/R_Wrist/R_Hand/R_Thumb1/R_Thumb2/R_Thumb3
+        weight: 1
+      - path: Pants
+        weight: 1
+      - path: PHONE
+        weight: 1
+      - path: Shoe_L
+        weight: 1
+      - path: Shoe_R
+        weight: 1
+      - path: Undershirt
+        weight: 1
+      - path: Vest
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
