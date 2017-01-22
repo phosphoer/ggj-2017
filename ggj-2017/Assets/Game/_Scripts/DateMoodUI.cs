@@ -31,9 +31,8 @@ public class DateMoodUI : MonoBehaviour
 
   [SerializeField]
   private Image m_moodColorImage;
-
   [SerializeField]
-  private Image m_intensityIcon;
+  private Sprite[] m_colorIcons;
 
   private int m_moodIntensity;
   private MoodColor m_moodColor;
@@ -54,6 +53,7 @@ public class DateMoodUI : MonoBehaviour
     Color saturatedColor = Color.HSVToRGB(h, s, v);
 
     m_moodColorImage.color = saturatedColor;
-    m_intensityIcon.transform.localScale = Vector3.one * (intensityRamp);
+    m_moodColorImage.sprite = m_colorIcons[(int)MoodColor];
+    m_moodColorImage.transform.localScale = Vector3.one * (Mathf.Max(intensityRamp, 0.2f, 1.0f));
   }
 }

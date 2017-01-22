@@ -127,7 +127,8 @@ public class DateMood : MonoBehaviour
       MoodIntensity = currentIntensity;
     }
 
-    if (MoodIntensity > originalIntensity)
+    // Do an emote based on whether this was a positive interaction 
+    if (MoodIntensity >= originalIntensity)
     {
       if (m_animator != null) m_animator.SetTrigger("EmoteNegative");
     }
