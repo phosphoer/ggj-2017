@@ -6,6 +6,8 @@ public class MoodColorZone : MonoBehaviour
   public MoodColor MoodColor;
   public int MoodIntensity = 1;
 
+  public Transform FocusTransform { get {return m_focusTransform; } }
+
   public static event System.Action<MoodColorZone, MoodColor> MoodZoneActivated;
   
   [SerializeField]

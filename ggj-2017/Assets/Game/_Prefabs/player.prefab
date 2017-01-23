@@ -2737,7 +2737,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608638547949792}
   m_LocalRotation: {x: -0, y: 0.99993235, z: -0, w: -0.011635799}
-  m_LocalPosition: {x: 6.74, y: 0.5, z: 15.19}
+  m_LocalPosition: {x: 8.76, y: 0.5, z: 6.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4919188537795236}
@@ -3093,7 +3093,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3155,6 +3155,9 @@ MonoBehaviour:
   m_soundRed: {fileID: 8300000, guid: 595315ab2f774b945b2bebb4e27086cf, type: 3}
   m_soundBlue: {fileID: 8300000, guid: 9e20da37faae653499b9a630c6e1e0f0, type: 3}
   m_soundYellow: {fileID: 8300000, guid: 103f789865f4e524d90763b465943e8d, type: 3}
+  m_renderers:
+  - {fileID: 137644995345030012}
+  - {fileID: 137266387462959702}
 --- !u!136 &136390105028454590
 CapsuleCollider:
   m_ObjectHideFlags: 1
