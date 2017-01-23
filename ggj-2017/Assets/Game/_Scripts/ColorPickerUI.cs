@@ -17,9 +17,6 @@ public class ColorPickerUI : MonoBehaviour
   private ColorOption[] m_colorOptions;
 
   [SerializeField]
-  private Image[] m_colorWheels;
-
-  [SerializeField]
   private Transform m_root;
 
   private Dictionary<MoodColor, ColorOption> m_colorOptionsMap = new Dictionary<MoodColor, ColorOption>();
@@ -41,14 +38,6 @@ public class ColorPickerUI : MonoBehaviour
     {
       m_colorOptionsMap.Add(option.MoodColor, option);
     }
-
-    foreach (Image color in m_colorWheels)
-    {
-      if (color != null)
-        color.gameObject.SetActive(false);
-    }
-
-    m_colorWheels[(int)m_baseColor].gameObject.SetActive(true);
   }
 
   private IEnumerator ColorSelectAnimation(ColorOption option)
