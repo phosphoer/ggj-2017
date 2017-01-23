@@ -59,7 +59,8 @@ public class DateMoodUI : MonoBehaviour
     if (!m_animating)
       StartCoroutine(FadeInAndOut());
 
-    // float intensityRamp = (float)m_moodIntensity / GameGlobals.Instance.MaxIntensity;
+    float intensityRamp = (float)m_moodIntensity / GameGlobals.Instance.MaxIntensity;
+    m_moodColorImage.transform.localScale = Vector3.one * Mathf.Clamp(intensityRamp, 0.25f, 1.0f);
     
     // float h, s, v;
     Color baseColor = GameGlobals.Instance.MoodColors[(int)MoodColor];
@@ -71,6 +72,7 @@ public class DateMoodUI : MonoBehaviour
 
     int spriteIndex = (int)MoodColor * 3;
     int intensityAdd = Mathf.RoundToInt(Mathf.Clamp(((float)MoodIntensity / GameGlobals.Instance.MaxIntensity) * 2, 0, 2));
+
     m_moodColorImage.sprite = m_colorIcons[spriteIndex + intensityAdd];
   }
 
