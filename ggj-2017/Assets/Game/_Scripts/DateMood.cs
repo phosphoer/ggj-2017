@@ -45,6 +45,11 @@ public class DateMood : MonoBehaviour
   [SerializeField]
   private Renderer[] m_dateRenderers;
 
+  public void ShowUI()
+  {
+    m_moodUI.RefreshUI();
+  }
+
   public void ApplyMoodEffect(MoodColor appliedColor, int moodBaseIntensity)
   {
     Debug.Log(string.Format("Applying {0} to date's {1}", appliedColor, MoodColor));

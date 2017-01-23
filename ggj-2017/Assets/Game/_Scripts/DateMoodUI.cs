@@ -32,6 +32,7 @@ public class DateMoodUI : MonoBehaviour
 
   [SerializeField]
   private Image m_moodColorImage;
+
   [SerializeField]
   private Sprite[] m_colorIcons;
 
@@ -53,7 +54,7 @@ public class DateMoodUI : MonoBehaviour
     }
   }
 
-  private void RefreshUI()
+  public void RefreshUI()
   {
     if (!m_animating)
       StartCoroutine(FadeInAndOut());
@@ -67,7 +68,10 @@ public class DateMoodUI : MonoBehaviour
     // Color saturatedColor = Color.HSVToRGB(h, s, v);
 
     m_moodColorImage.color = baseColor;
-    m_moodColorImage.sprite = m_colorIcons[(int)MoodColor];
+
+    int spriteIndex = (int)MoodColor * 3;
+    int intensityAdd = Mathf.RoundToInt(Mathf.Clamp(((float)MoodIntensity / GameGlobals.Instance.MaxIntensity) * 2, 0, 2));
+    m_moodColorImage.sprite = m_colorIcons[spriteIndex + intensityAdd];
   }
 
   private IEnumerator FadeInAndOut()

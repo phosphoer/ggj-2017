@@ -193,7 +193,6 @@ public class PlayerController : MonoBehaviour
     DateMood dateMood = col.GetComponent<DateMood>();
     if (dateMood != null)
     {
-
     }
   }
 
@@ -204,12 +203,6 @@ public class PlayerController : MonoBehaviour
     {
       m_currentMoodZone.HideInteractionPrompt();
       m_currentMoodZone = null;
-    }
-
-    DateMood dateMood = col.GetComponent<DateMood>();
-    if (dateMood != null)
-    {
-      
     }
   }
 }

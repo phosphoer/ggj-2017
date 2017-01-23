@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 114302510931322244}
   - component: {fileID: 136199004870868852}
   - component: {fileID: 82896477264980642}
+  - component: {fileID: 65532983676282274}
   m_Layer: 0
   m_Name: date
   m_TagString: Untagged
@@ -3009,6 +3010,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &65532983676282274
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255725707355772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82896477264980642
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3076,7 +3089,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3120,11 +3133,23 @@ MonoBehaviour:
   m_moodColorImage: {fileID: 114445598548189908}
   m_colorIcons:
   - {fileID: 21300000, guid: c23924910765647a1a0ac2c10fd3ba2f, type: 3}
+  - {fileID: 21300000, guid: 129f9e4e14d5c96478494b77b69cdd8e, type: 3}
+  - {fileID: 21300000, guid: 98a135081e8bf354e84036d438162ec9, type: 3}
   - {fileID: 21300000, guid: 201aaa154aec948ccb77c81c23518272, type: 3}
+  - {fileID: 21300000, guid: 7cc21960434790148aaf50df0efc59a4, type: 3}
+  - {fileID: 21300000, guid: e0f1d1b450454624bb7ebee0d6327954, type: 3}
   - {fileID: 21300000, guid: 241a96b9cf9724755b47409e7ad2bee7, type: 3}
+  - {fileID: 21300000, guid: e7ebd249149322f418075ca7ba0138b0, type: 3}
+  - {fileID: 21300000, guid: a5c938fdaff06fe45a158f239303cbb3, type: 3}
   - {fileID: 21300000, guid: b5863e72245d94111b3aa9ffe5e288be, type: 3}
+  - {fileID: 21300000, guid: d6d257efcd229fd4f8c032c248f0d0cf, type: 3}
+  - {fileID: 21300000, guid: 4bd20264a5f6eef4f80603000562b28f, type: 3}
   - {fileID: 21300000, guid: 9d970390e1b5347b7823e74ca11839be, type: 3}
+  - {fileID: 21300000, guid: 2c9daebc122fea54b9dbf810f191922f, type: 3}
+  - {fileID: 21300000, guid: 738fe197cf5246c4f823fe80844d58b0, type: 3}
   - {fileID: 21300000, guid: 22d15d7dbe4c14bd6bef0e88120062d0, type: 3}
+  - {fileID: 21300000, guid: 306e2eca07cbb7b44ad6b5206d0cd40e, type: 3}
+  - {fileID: 21300000, guid: 740e0534d17750c4cab8aa3db9d5d095, type: 3}
 --- !u!114 &114114899931937694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3246,7 +3271,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 241a96b9cf9724755b47409e7ad2bee7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 201aaa154aec948ccb77c81c23518272, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
