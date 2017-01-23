@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         MoodColor combined = MoodColorZone.CombineColors(MoodColor.Red, m_currentMoodZone.MoodColor);
         ParticleSystem particles = Instantiate(m_interactionParticle);
         particles.transform.position = m_currentMoodZone.FocusTransform.position;
-        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.y);
+        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.z);
         var settings = particles.main;
         Destroy(particles.gameObject, 5.0f);
         settings.startColor = GameGlobals.Instance.MoodColors[(int)combined];
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         MoodColor combined = MoodColorZone.CombineColors(MoodColor.Blue, m_currentMoodZone.MoodColor);
         ParticleSystem particles = Instantiate(m_interactionParticle);
         particles.transform.position = m_currentMoodZone.FocusTransform.position;
-        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.y);
+        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.z);
         var settings = particles.main;
         Destroy(particles.gameObject, 5.0f);
         settings.startColor = GameGlobals.Instance.MoodColors[(int)combined];
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         MoodColor combined = MoodColorZone.CombineColors(MoodColor.Yellow, m_currentMoodZone.MoodColor);
         ParticleSystem particles = Instantiate(m_interactionParticle);
         particles.transform.position = m_currentMoodZone.FocusTransform.position;
-        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.y);
+        particles.transform.position = new Vector3(particles.transform.position.x, 0, particles.transform.position.z);
         var settings = particles.main;
         Destroy(particles.gameObject, 5.0f);
         settings.startColor = GameGlobals.Instance.MoodColors[(int)combined];
@@ -189,6 +189,12 @@ public class PlayerController : MonoBehaviour
       m_currentMoodZone = moodZone;
       m_currentMoodZone.ShowInteractionPrompt();
     }
+
+    DateMood dateMood = col.GetComponent<DateMood>();
+    if (dateMood != null)
+    {
+
+    }
   }
 
   private void OnTriggerExit(Collider col)
@@ -198,6 +204,12 @@ public class PlayerController : MonoBehaviour
     {
       m_currentMoodZone.HideInteractionPrompt();
       m_currentMoodZone = null;
+    }
+
+    DateMood dateMood = col.GetComponent<DateMood>();
+    if (dateMood != null)
+    {
+      
     }
   }
 }
