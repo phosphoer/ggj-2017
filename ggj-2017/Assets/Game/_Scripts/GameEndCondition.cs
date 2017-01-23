@@ -132,6 +132,7 @@ public class GameEndCondition : MonoBehaviour
       yield return null;
     }
 
+    SceneManager.UnloadSceneAsync(gameObject.scene.name);
     SceneManager.LoadScene(gameObject.scene.name);
   }
 }
