@@ -3158,6 +3158,8 @@ MonoBehaviour:
   m_renderers:
   - {fileID: 137644995345030012}
   - {fileID: 137266387462959702}
+  m_interactionParticle: {fileID: 198592387726447772, guid: 03bf32812763e644d9c9e95c9d388ce3,
+    type: 2}
 --- !u!136 &136390105028454590
 CapsuleCollider:
   m_ObjectHideFlags: 1
