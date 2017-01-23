@@ -12,4 +12,13 @@ public class AudioSync : MonoBehaviour
       source.Play();
     }
   }
+
+  private void Update()
+  {
+    for (int i = 1; i < m_audioSources.Length; ++i)
+    {
+      if (m_audioSources[i].clip.length >= m_audioSources[0].time)
+        m_audioSources[i].time = m_audioSources[0].time;
+    }
+  }
 }
