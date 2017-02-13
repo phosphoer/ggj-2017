@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
   private Rewired.Player m_rewiredPlayer;
   private MoodColorZone m_currentMoodZone;
   private ColorPickerUI m_colorPicker;
+  private DateMood m_nearbyDate;
 
   private void Start()
   {
@@ -45,6 +46,40 @@ public class PlayerController : MonoBehaviour
       r.sharedMaterial.SetColor("_Color", Color.white);
   }
 
+  private void OnTriggerEnter(Collider col)
+  {
+    MoodColorZone moodZone = col.GetComponent<MoodColorZone>();
+    if (moodZone != null)
+    {
+      m_currentMoodZone = moodZone;
+      m_currentMoodZone.ShowInteractionPrompt();
+    }
+
+    DateMood dateMood = col.GetComponent<DateMood>();
+    if (dateMood != null)
+    {
+      dateMood.ShowInteractionPrompt();
+      m_nearbyDate = dateMood;
+    }
+  }
+
+  private void OnTriggerExit(Collider col)
+  {
+    MoodColorZone moodZone = col.GetComponent<MoodColorZone>();
+    if (moodZone != null && m_currentMoodZone == moodZone)
+    {
+      m_currentMoodZone.HideInteractionPrompt();
+      m_currentMoodZone = null;
+    }
+
+    DateMood dateMood = col.GetComponent<DateMood>();
+    if (dateMood != null)
+    {
+      dateMood.HideInteractionPrompt();
+      m_nearbyDate = null;
+    }
+  }
+
   private void Update()
   {
     if (!Rewired.ReInput.isReady)
@@ -53,13 +88,23 @@ public class PlayerController : MonoBehaviour
     }
 
     // Interaction input happens if we are in an interaction zone 
-    if (m_rewiredPlayer.GetButtonDown("Interact") && m_currentMoodZone != null && m_colorPicker == null)
+    if (m_rewiredPlayer.GetButtonDown("Interact"))
     {
-      m_currentMoodZone.HideInteractionPrompt();
-      m_currentMoodZone.BeginInteraction();
-      m_colorPicker = Instantiate(m_colorPickerUIPrefab);
-      m_colorPicker.SetBaseColor(m_currentMoodZone.MoodColor);
-      if (m_animator != null) m_animator.SetTrigger("InteractGreen");
+      if (m_currentMoodZone != null && m_colorPicker == null)
+      {
+        m_currentMoodZone.HideInteractionPrompt();
+        m_currentMoodZone.BeginInteraction();
+        m_colorPicker = Instantiate(m_colorPickerUIPrefab);
+        m_colorPicker.SetBaseColor(m_currentMoodZone.MoodColor);
+        m_colorPicker.ForDate = FindObjectOfType<DateMood>();
+        
+        if (m_animator != null) 
+          m_animator.SetTrigger("InteractGreen");
+      }
+      else if (m_nearbyDate != null)
+      {
+        m_nearbyDate.ShowUI();
+      }
     }
     
     // Color input
@@ -178,31 +223,6 @@ public class PlayerController : MonoBehaviour
         r.sharedMaterial.SetColor("_Color", Color.Lerp(toColor, Color.white, t));
 
       yield return null; 
-    }
-  }
-
-  private void OnTriggerEnter(Collider col)
-  {
-    MoodColorZone moodZone = col.GetComponent<MoodColorZone>();
-    if (moodZone != null)
-    {
-      m_currentMoodZone = moodZone;
-      m_currentMoodZone.ShowInteractionPrompt();
-    }
-
-    DateMood dateMood = col.GetComponent<DateMood>();
-    if (dateMood != null)
-    {
-    }
-  }
-
-  private void OnTriggerExit(Collider col)
-  {
-    MoodColorZone moodZone = col.GetComponent<MoodColorZone>();
-    if (moodZone != null && m_currentMoodZone == moodZone)
-    {
-      m_currentMoodZone.HideInteractionPrompt();
-      m_currentMoodZone = null;
     }
   }
 }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class ColorPickerUI : MonoBehaviour
 {
+  public DateMood ForDate;
+
   [System.SerializableAttribute]
   public class ColorOption
   {
@@ -18,6 +20,9 @@ public class ColorPickerUI : MonoBehaviour
 
   [SerializeField]
   private Transform m_root;
+
+  [SerializeField]
+  private ColorWheelUI m_colorWheelUI;
 
   private Dictionary<MoodColor, ColorOption> m_colorOptionsMap = new Dictionary<MoodColor, ColorOption>();
   private MoodColor m_baseColor;
@@ -38,6 +43,10 @@ public class ColorPickerUI : MonoBehaviour
     {
       m_colorOptionsMap.Add(option.MoodColor, option);
     }
+
+    m_colorWheelUI.MoodColor = ForDate.MoodColor;
+    m_colorWheelUI.MoodIntensity = ForDate.MoodIntensity;
+    m_colorWheelUI.UpdateUINoAnimation();
   }
 
   private IEnumerator ColorSelectAnimation(ColorOption option)

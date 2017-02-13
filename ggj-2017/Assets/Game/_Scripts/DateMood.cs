@@ -31,22 +31,54 @@ public class DateMood : MonoBehaviour
   private int m_moodIntensity;
   private int m_currentTimeIcon;
   private float m_moodDriftTimer;
+  private GameObject m_interactionPrompt;
 
   [SerializeField]
   private AudioClip m_happySound;
+
   [SerializeField]
   private AudioClip m_sadSound;
+
   [SerializeField]
-  private DateMoodUI m_moodUI;
+  private ColorWheelUI m_moodUI;
+
   [SerializeField]
   private GameObject[] m_timeIcons;
+
   [SerializeField]
   private Animator m_animator;
+
   [SerializeField]
   private Renderer[] m_dateRenderers;
 
+  [SerializeField]
+  private Transform m_focusTransform;
+
+  public void ShowInteractionPrompt()
+  {
+    if (m_interactionPrompt != null)
+    {
+      Destroy(m_interactionPrompt);
+    }
+    
+    m_interactionPrompt = Instantiate(GameGlobals.Instance.InteractPromptPrefab);
+    m_interactionPrompt.transform.position = m_focusTransform.position;
+    m_interactionPrompt.transform.SetParent(transform);
+  }
+
+  public void HideInteractionPrompt()
+  {
+    if (m_interactionPrompt != null)
+    {
+      Destroy(m_interactionPrompt);
+      m_interactionPrompt = null;
+    }
+  }
+
   public void ShowUI()
   {
+    m_moodUI.MoodColor = MoodColor;
+    m_moodUI.MoodIntensity = MoodIntensity;
     m_moodUI.RefreshUI();
   }
 
