@@ -17,8 +17,7 @@ public class AudioSync : MonoBehaviour
   {
     for (int i = 1; i < m_audioSources.Length; ++i)
     {
-      if (m_audioSources[i].clip.length >= m_audioSources[0].time)
-        m_audioSources[i].time = m_audioSources[0].time;
+      m_audioSources[i].timeSamples = m_audioSources[0].timeSamples;
     }
   }
 }
