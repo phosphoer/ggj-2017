@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Player1
+  m_Name: FlowerShopMan
   m_Shader: {fileID: 4800000, guid: 47a24c6cb2a1cf8439c1ddf930fcd058, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -49,12 +49,12 @@ Material:
         name: _Lighting
       second:
         m_Texture: {fileID: 2800000, guid: dd7521885c8eb8949966a136b1ce9485, type: 3}
-        m_Scale: {x: 1, y: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: faf52672ba785084fbde69ab52a48225, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1ac1adf9cdb3ca84f837bee33f38f6a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -139,7 +139,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _Color
-      second: {r: 0.12527896, g: 0.5448606, b: 0.7262052, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
