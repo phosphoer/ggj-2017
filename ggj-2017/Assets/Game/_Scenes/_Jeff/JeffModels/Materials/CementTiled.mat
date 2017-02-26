@@ -55,7 +55,7 @@ Material:
         name: _MainTex
       second:
         m_Texture: {fileID: 2800000, guid: bc6697fcd7eaa2d4f9f8f28c39357071, type: 3}
-        m_Scale: {x: 5, y: 5}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
@@ -77,8 +77,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: _BubbleFade
+      second: 0
+    - first:
         name: _BumpScale
       second: 0.2
+    - first:
+        name: _ColorDist
+      second: 0
     - first:
         name: _Cutoff
       second: 0.5
@@ -126,8 +132,14 @@ Material:
       second: 1
     m_Colors:
     - first:
+        name: _BubbleCenter
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _BubbleColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
         name: _Color
-      second: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
+      second: {r: 0.6764706, g: 0.6012657, b: 0.40385294, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

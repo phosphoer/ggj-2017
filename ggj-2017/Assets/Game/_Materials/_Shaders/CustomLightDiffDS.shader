@@ -1,4 +1,4 @@
-﻿Shader "Custom/Opaque/CustomLightDiff" {
+﻿Shader "Custom/Opaque/CustomLightDiffDS" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
@@ -11,6 +11,7 @@
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
+		Cull Off
 		LOD 200
 		
 		CGPROGRAM
