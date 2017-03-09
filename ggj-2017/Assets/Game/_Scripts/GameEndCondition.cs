@@ -14,7 +14,7 @@ public class GameEndCondition : MonoBehaviour
   public static event System.Action MinuteElapsed;
 
   [SerializeField]
-  private Image m_fadeToBlackImage;
+  private Image[] m_fadeToBlackImage;
 
   [SerializeField]
   private GameObject m_loseText;
@@ -23,7 +23,7 @@ public class GameEndCondition : MonoBehaviour
   private Text m_winText;
 
   [SerializeField]
-  private Image m_fadeToWhiteImage;
+  private Image[] m_fadeToWhiteImage;
 
   [SerializeField]
   private MessageList[] m_endMessages;
@@ -99,20 +99,25 @@ public class GameEndCondition : MonoBehaviour
     int messageIndex = Random.Range(0, messageList.Messages.Length);
     string message = messageList.Messages[messageIndex];
 
-    m_winText.text = message;
-    m_winText.gameObject.SetActive(true);
-
     const float duration = 3.0f;
     float startTime = Time.time;
     while (Time.time < startTime + duration)
     {
       float t = (Time.time - startTime) / duration;
-      Color whiteColor = m_fadeToWhiteImage.color;
-      whiteColor.a = Mathf.Lerp(0.0f, 1.0f, t);
-      m_fadeToWhiteImage.color = whiteColor;
+      foreach (Image img in m_fadeToWhiteImage)
+      {
+        Color color = img.color;
+        color.a = Mathf.Lerp(0.0f, 1.0f, t);
+        img.color = color;
+      }
+
       yield return null;
     }
 
+    m_winText.text = string.Format("\"{0}\"", message);
+    m_winText.gameObject.SetActive(true);
+
+    yield return new WaitForSeconds(3.0f);
 
     SceneManager.LoadScene(gameObject.scene.name);
   }
@@ -126,11 +131,17 @@ public class GameEndCondition : MonoBehaviour
     while (Time.time < startTime + duration)
     {
       float t = (Time.time - startTime) / duration;
-      Color blackColor = m_fadeToBlackImage.color;
-      blackColor.a = Mathf.Lerp(0.0f, 1.0f, t);
-      m_fadeToBlackImage.color = blackColor;
+      foreach (Image img in m_fadeToBlackImage)
+      {
+        Color color = img.color;
+        color.a = Mathf.Lerp(0.0f, 1.0f, t);
+        img.color = color;
+      }
+
       yield return null;
     }
+
+    yield return new WaitForSeconds(2.0f);
 
     SceneManager.UnloadSceneAsync(gameObject.scene.name);
     SceneManager.LoadScene(gameObject.scene.name);

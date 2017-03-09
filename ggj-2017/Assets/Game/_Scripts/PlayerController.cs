@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
   private void OnTriggerExit(Collider col)
   {
     MoodColorZone moodZone = col.GetComponent<MoodColorZone>();
-    if (moodZone != null && m_currentMoodZone == moodZone)
+    if (moodZone != null && m_currentMoodZone == moodZone && m_colorPicker == null)
     {
       m_currentMoodZone.HideInteractionPrompt();
       m_currentMoodZone = null;

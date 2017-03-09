@@ -75,7 +75,7 @@ public class ColorWheelUI : MonoBehaviour
     float colorArcAngleSize = 2 * Mathf.PI / colorCount;
 
     // Get the angle wedge the current and applied colors are in
-    float currentColorAngle = colorArcAngleSize * (int)mood;
+    float currentColorAngle = colorArcAngleSize * (int)mood + colorArcAngleSize * 0.5f;
 
     // Calculate the mood vector
     Vector2 currentMoodVector = new Vector2(Mathf.Cos(currentColorAngle), Mathf.Sin(currentColorAngle)).normalized;
