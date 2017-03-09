@@ -99,12 +99,14 @@ public class GameEndCondition : MonoBehaviour
     int messageIndex = Random.Range(0, messageList.Messages.Length);
     string message = messageList.Messages[messageIndex];
 
+    Image[] winImage = messageListIndex <= 1 ? m_fadeToBlackImage : m_fadeToWhiteImage;
+
     const float duration = 3.0f;
     float startTime = Time.time;
     while (Time.time < startTime + duration)
     {
       float t = (Time.time - startTime) / duration;
-      foreach (Image img in m_fadeToWhiteImage)
+      foreach (Image img in winImage)
       {
         Color color = img.color;
         color.a = Mathf.Lerp(0.0f, 1.0f, t);
